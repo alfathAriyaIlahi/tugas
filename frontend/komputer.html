@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Komputer - Rental Komputer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem Rental Komputer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="petugas.html">Petugas</a></li>
+                    <li><a href="jenis.html">Jenis Komputer</a></li>
+                    <li><a href="pelanggan.html">Pelanggan</a></li>
+                    <li><a href="komputer.html">Komputer</a></li>
+                    <li><a href="rental.html">Rental</a></li>
+                    <li><a href="pembayaran.html">Pembayaran</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Tambah Komputer Baru</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="idKomputer">ID Komputer</label>
+                    <input type="text" id="idKomputer" name="idKomputer" placeholder="Contoh: K001" required>
+                </div>
+                <div class="form-group">
+                    <label for="merk">Merk / Spesifikasi</label>
+                    <input type="text" id="merk" name="merk" placeholder="Contoh: ASUS ROG" required>
+                </div>
+                <div class="form-group">
+                    <label for="idJenis">Jenis Komputer</label>
+                    <select id="idJenis" name="idJenis" required>
+                        <option value="">-- Pilih Jenis --</option>
+                        <!--OPT_JENIS-->
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Simpan Komputer</button>
+            </form>
+
+            <h2>Daftar Komputer</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomor</th>
+                        <th>ID Komputer</th>
+                        <th>Merk</th>
+                        <th>Jenis</th>
+                        <th>Harga/Jam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--DATA_KOMPUTER-->
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

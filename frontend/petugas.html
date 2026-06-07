@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petugas - Rental Komputer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem Rental Komputer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="petugas.html">Petugas</a></li>
+                    <li><a href="jenis.html">Jenis Komputer</a></li>
+                    <li><a href="pelanggan.html">Pelanggan</a></li>
+                    <li><a href="komputer.html">Komputer</a></li>
+                    <li><a href="rental.html">Rental</a></li>
+                    <li><a href="pembayaran.html">Pembayaran</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Tambah Petugas</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="idPetugas">ID Petugas</label>
+                    <input type="text" id="idPetugas" name="idPetugas" placeholder="Contoh: PT002" required>
+                </div>
+                <div class="form-group">
+                    <label for="namaPetugas">Nama Petugas</label>
+                    <input type="text" id="namaPetugas" name="namaPetugas" placeholder="Masukkan nama petugas" required>
+                </div>
+                <button type="submit" class="btn-submit">Simpan Petugas</button>
+            </form>
+
+            <h2>Daftar Petugas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomor</th>
+                        <th>ID Petugas</th>
+                        <th>Nama Petugas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--DATA_PETUGAS-->
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

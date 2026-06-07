@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi Rental - Rental Komputer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem Rental Komputer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="petugas.html">Petugas</a></li>
+                    <li><a href="jenis.html">Jenis Komputer</a></li>
+                    <li><a href="pelanggan.html">Pelanggan</a></li>
+                    <li><a href="komputer.html">Komputer</a></li>
+                    <li><a href="rental.html">Rental</a></li>
+                    <li><a href="pembayaran.html">Pembayaran</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Input Transaksi Rental</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="idRental">ID Rental</label>
+                    <input type="text" id="idRental" name="idRental" placeholder="Contoh: R001" required>
+                </div>
+                <div class="form-group">
+                    <label for="idPelanggan">Pelanggan</label>
+                    <select id="idPelanggan" name="idPelanggan" required>
+                        <option value="">-- Pilih Pelanggan --</option>
+                        <!--OPT_PELANGGAN-->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="idKomputer">Komputer</label>
+                    <select id="idKomputer" name="idKomputer" required>
+                        <option value="">-- Pilih Komputer --</option>
+                        <!--OPT_KOMPUTER-->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="idPetugas">Petugas</label>
+                    <select id="idPetugas" name="idPetugas" required>
+                        <option value="">-- Pilih Petugas --</option>
+                        <!--OPT_PETUGAS-->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lamaSewa">Lama Sewa (Jam)</label>
+                    <input type="number" id="lamaSewa" name="lamaSewa" min="1" placeholder="Contoh: 3" required>
+                </div>
+                <button type="submit" class="btn-submit">Simpan Rental</button>
+            </form>
+
+            <h2>Daftar Transaksi Rental</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomor</th>
+                        <th>ID Rental</th>
+                        <th>Pelanggan</th>
+                        <th>Komputer</th>
+                        <th>Petugas</th>
+                        <th>Lama Sewa</th>
+                        <th>Total Tagihan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--DATA_RENTAL-->
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

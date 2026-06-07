@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Komputer - Rental Komputer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem Rental Komputer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="petugas.html">Petugas</a></li>
+                    <li><a href="jenis.html">Jenis Komputer</a></li>
+                    <li><a href="pelanggan.html">Pelanggan</a></li>
+                    <li><a href="komputer.html">Komputer</a></li>
+                    <li><a href="rental.html">Rental</a></li>
+                    <li><a href="pembayaran.html">Pembayaran</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Tambah Jenis Komputer</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="idJenis">ID Jenis</label>
+                    <input type="text" id="idJenis" name="idJenis" placeholder="Contoh: J003" required>
+                </div>
+                <div class="form-group">
+                    <label for="namaJenis">Nama Jenis</label>
+                    <input type="text" id="namaJenis" name="namaJenis" placeholder="Contoh: Editing" required>
+                </div>
+                <div class="form-group">
+                    <label for="hargaPerJam">Harga Per Jam (Rp)</label>
+                    <input type="number" id="hargaPerJam" name="hargaPerJam" placeholder="Contoh: 15000" required>
+                </div>
+                <button type="submit" class="btn-submit">Simpan Jenis Komputer</button>
+            </form>
+
+            <h2>Daftar Jenis Komputer</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomor</th>
+                        <th>ID Jenis</th>
+                        <th>Nama Jenis</th>
+                        <th>Harga/Jam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--DATA_JENIS-->
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - Rental Komputer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem Rental Komputer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="petugas.html">Petugas</a></li>
+                    <li><a href="jenis.html">Jenis Komputer</a></li>
+                    <li><a href="pelanggan.html">Pelanggan</a></li>
+                    <li><a href="komputer.html">Komputer</a></li>
+                    <li><a href="rental.html">Rental</a></li>
+                    <li><a href="pembayaran.html">Pembayaran</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Input Pembayaran</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="idPembayaran">ID Pembayaran</label>
+                    <input type="text" id="idPembayaran" name="idPembayaran" placeholder="Contoh: PB001" required>
+                </div>
+                <div class="form-group">
+                    <label for="idRental">ID Rental</label>
+                    <select id="idRental" name="idRental" required>
+                        <option value="">-- Pilih Rental (Tagihan) --</option>
+                        <!--OPT_RENTAL-->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bayar">Uang Bayar (Rp)</label>
+                    <input type="number" id="bayar" name="bayar" min="0" placeholder="Contoh: 50000" required>
+                </div>
+                <button type="submit" class="btn-submit">Proses Pembayaran</button>
+            </form>
+
+            <h2>Daftar Pembayaran</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomor</th>
+                        <th>ID Pembayaran</th>
+                        <th>ID Rental</th>
+                        <th>Total Tagihan</th>
+                        <th>Uang Bayar</th>
+                        <th>Kembalian</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--DATA_PEMBAYARAN-->
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
