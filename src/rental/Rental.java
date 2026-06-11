@@ -1,5 +1,7 @@
 package rental;
 
+import java.sql.*;
+
 public class Rental {
     private String idRental;
     private Pelanggan pelanggan;
@@ -38,4 +40,40 @@ public class Rental {
     public Komputer getKomputer() { return komputer; }
     public Petugas getPetugas() { return petugas; }
     public int getLamaSewa() { return lamaSewa; }
+
+    static String formatRupiah(long amount) {
+        String raw = String.valueOf(amount);
+        StringBuilder sb = new StringBuilder();
+        int count = 0;
+        for (int i = raw.length() - 1; i >= 0; i--) {
+            sb.insert(0, raw.charAt(i));
+            count++;
+            if (count % 3 == 0 && i > 0) sb.insert(0, '.');
+        }
+        return "Rp " + sb;
+    }
+
+    static String buildRentalOptions() {
+        String sql = "SELECT r.idRental, pl.nama, (r.lamaSewa * j.hargaPerJam) AS tagihan " +
+                     "FROM rental r " +
+                     "JOIN pelanggan pl ON r.idPelanggan = pl.idPelanggan " +
+                     "JOIN komputer k ON r.idKomputer = k.idKomputer " +
+                     "JOIN jenis_komputer j ON k.idJenis = j.idJenis " +
+                     "LEFT JOIN pembayaran pb ON r.idRental = pb.idRental " +
+                     "WHERE pb.idPembayaran IS NULL";
+        StringBuilder sb = new StringBuilder();
+        try (Connection c = Database.conn();
+             ResultSet rs = c.createStatement().executeQuery(sql)) {
+            while (rs.next()) {
+                String id = rs.getString(1);
+                String nama = rs.getString(2);
+                long tagihan = rs.getLong(3);
+                sb.append("<option value=\"").append(id).append("\">")
+                  .append(id).append(" - ").append(nama)
+                  .append(" (Rp ").append(formatRupiah(tagihan).replace("Rp ", "")).append(")")
+                  .append("</option>");
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+        return sb.toString();
+    }
 }

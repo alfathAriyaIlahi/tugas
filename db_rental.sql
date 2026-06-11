@@ -44,5 +44,3 @@ CREATE TABLE pembayaran (
   FOREIGN KEY (idRental) REFERENCES rental(idRental)
 );
 
--- Insert data awal untuk jenis komputer agar MainRental bisa berjalan mulus
-INSERT INTO jenis_komputer (idJenis, namaJenis, hargaPerJam) VALUES ('J001', 'Gaming', 10000);
