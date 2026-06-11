@@ -26,10 +26,7 @@
         <section>
             <h2>Input Pembayaran</h2>
             <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="idPembayaran">ID Pembayaran</label>
-                    <input type="text" id="idPembayaran" name="idPembayaran" placeholder="Contoh: PB001" required>
-                </div>
+                <input type="hidden" name="id" id="formId">
                 <div class="form-group">
                     <label for="idRental">ID Rental</label>
                     <select id="idRental" name="idRental" required>
@@ -54,6 +51,7 @@
                         <th>Total Tagihan</th>
                         <th>Uang Bayar</th>
                         <th>Kembalian</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

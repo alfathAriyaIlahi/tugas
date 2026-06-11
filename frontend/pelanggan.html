@@ -26,10 +26,7 @@
         <section>
             <h2>Tambah Pelanggan Baru</h2>
             <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="idPelanggan">ID Pelanggan</label>
-                    <input type="text" id="idPelanggan" name="idPelanggan" placeholder="Contoh: P001" required>
-                </div>
+                <input type="hidden" name="id" id="formId">
                 <div class="form-group">
                     <label for="nama">Nama Lengkap</label>
                     <input type="text" id="nama" name="nama" placeholder="Masukkan nama pelanggan" required>
@@ -49,6 +46,7 @@
                         <th>ID Pelanggan</th>
                         <th>Nama Lengkap</th>
                         <th>Nomor HP</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

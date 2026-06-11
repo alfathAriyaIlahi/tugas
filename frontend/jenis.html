@@ -26,10 +26,7 @@
         <section>
             <h2>Tambah Jenis Komputer</h2>
             <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="idJenis">ID Jenis</label>
-                    <input type="text" id="idJenis" name="idJenis" placeholder="Contoh: J003" required>
-                </div>
+                <input type="hidden" name="id" id="formId">
                 <div class="form-group">
                     <label for="namaJenis">Nama Jenis</label>
                     <input type="text" id="namaJenis" name="namaJenis" placeholder="Contoh: Editing" required>
@@ -49,6 +46,7 @@
                         <th>ID Jenis</th>
                         <th>Nama Jenis</th>
                         <th>Harga/Jam</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

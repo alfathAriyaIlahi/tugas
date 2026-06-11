@@ -26,10 +26,7 @@
         <section>
             <h2>Input Transaksi Rental</h2>
             <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="idRental">ID Rental</label>
-                    <input type="text" id="idRental" name="idRental" placeholder="Contoh: R001" required>
-                </div>
+                <input type="hidden" name="id" id="formId">
                 <div class="form-group">
                     <label for="idPelanggan">Pelanggan</label>
                     <select id="idPelanggan" name="idPelanggan" required>
@@ -69,6 +66,7 @@
                         <th>Petugas</th>
                         <th>Lama Sewa</th>
                         <th>Total Tagihan</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

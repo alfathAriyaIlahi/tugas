@@ -26,10 +26,7 @@
         <section>
             <h2>Tambah Komputer Baru</h2>
             <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="idKomputer">ID Komputer</label>
-                    <input type="text" id="idKomputer" name="idKomputer" placeholder="Contoh: K001" required>
-                </div>
+                <input type="hidden" name="id" id="formId">
                 <div class="form-group">
                     <label for="merk">Merk / Spesifikasi</label>
                     <input type="text" id="merk" name="merk" placeholder="Contoh: ASUS ROG" required>
@@ -53,6 +50,7 @@
                         <th>Merk</th>
                         <th>Jenis</th>
                         <th>Harga/Jam</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

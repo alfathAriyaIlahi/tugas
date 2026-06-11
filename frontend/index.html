@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Rental Komputer</title>
+    <title>Dashboard - Sistem Rental Komputer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,7 +14,7 @@
             <h1>Sistem Rental Komputer</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html" class="nav-active">Beranda</a></li>
                     <li><a href="petugas.html">Petugas</a></li>
                     <li><a href="jenis.html">Jenis Komputer</a></li>
                     <li><a href="pelanggan.html">Pelanggan</a></li>
@@ -26,9 +26,62 @@
         </header>
 
         <section>
-            <h2>Selamat Datang di Sistem Rental Komputer</h2>
-            <p>Silakan gunakan menu di atas untuk mengelola data pelanggan, komputer, transaksi rental, dan pembayaran.
-            </p>
+            <h2>Dashboard</h2>
+            <p>Ringkasan data transaksi dan keuangan sistem rental komputer.</p>
+
+            <!-- Summary Cards -->
+            <div class="dashboard-cards">
+                <div class="dash-card card-income">
+                    <div class="dash-card-icon">&#128176;</div>
+                    <div class="dash-card-info">
+                        <span class="dash-card-label">Total Pendapatan</span>
+                        <span class="dash-card-value"><!--TOTAL_PENDAPATAN--></span>
+                    </div>
+                </div>
+                <div class="dash-card card-transactions">
+                    <div class="dash-card-icon">&#128196;</div>
+                    <div class="dash-card-info">
+                        <span class="dash-card-label">Total Transaksi</span>
+                        <span class="dash-card-value"><!--TOTAL_TRANSAKSI--></span>
+                    </div>
+                </div>
+                <div class="dash-card card-paid">
+                    <div class="dash-card-icon">&#9989;</div>
+                    <div class="dash-card-info">
+                        <span class="dash-card-label">Sudah Dibayar</span>
+                        <span class="dash-card-value"><!--TOTAL_LUNAS--></span>
+                    </div>
+                </div>
+                <div class="dash-card card-unpaid">
+                    <div class="dash-card-icon">&#9888;&#65039;</div>
+                    <div class="dash-card-info">
+                        <span class="dash-card-label">Belum Dibayar</span>
+                        <span class="dash-card-value"><!--TOTAL_BELUM--></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Transaksi -->
+            <h2>Detail Transaksi</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>ID Rental</th>
+                        <th>Pelanggan</th>
+                        <th>Komputer</th>
+                        <th>Jenis</th>
+                        <th>Petugas</th>
+                        <th>Lama Sewa</th>
+                        <th>Total Tagihan</th>
+                        <th>Uang Masuk</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--DATA_DASHBOARD-->
+                </tbody>
+            </table>
         </section>
     </div>
 </body>

@@ -26,10 +26,7 @@
         <section>
             <h2>Tambah Petugas</h2>
             <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="idPetugas">ID Petugas</label>
-                    <input type="text" id="idPetugas" name="idPetugas" placeholder="Contoh: PT002" required>
-                </div>
+                <input type="hidden" name="id" id="formId">
                 <div class="form-group">
                     <label for="namaPetugas">Nama Petugas</label>
                     <input type="text" id="namaPetugas" name="namaPetugas" placeholder="Masukkan nama petugas" required>
@@ -44,6 +41,7 @@
                         <th>Nomor</th>
                         <th>ID Petugas</th>
                         <th>Nama Petugas</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
